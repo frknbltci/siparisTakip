@@ -1,0 +1,15 @@
+C:\Users\fbalt\Desktop\halısiparis\haliSiparis\hali.BLL\bin\Debug\hali.BLL.dll.config
+C:\Users\fbalt\Desktop\halısiparis\haliSiparis\hali.BLL\bin\Debug\hali.BLL.dll
+C:\Users\fbalt\Desktop\halısiparis\haliSiparis\hali.BLL\bin\Debug\hali.BLL.pdb
+C:\Users\fbalt\Desktop\halısiparis\haliSiparis\hali.BLL\bin\Debug\EntityFramework.dll
+C:\Users\fbalt\Desktop\halısiparis\haliSiparis\hali.BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\fbalt\Desktop\halısiparis\haliSiparis\hali.BLL\bin\Debug\hali.DAL.dll
+C:\Users\fbalt\Desktop\halısiparis\haliSiparis\hali.BLL\bin\Debug\hali.DAL.pdb
+C:\Users\fbalt\Desktop\halısiparis\haliSiparis\hali.BLL\bin\Debug\hali.DAL.dll.config
+C:\Users\fbalt\Desktop\halısiparis\haliSiparis\hali.BLL\bin\Debug\EntityFramework.xml
+C:\Users\fbalt\Desktop\halısiparis\haliSiparis\hali.BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\fbalt\Desktop\halısiparis\haliSiparis\hali.BLL\obj\Debug\hali.BLL.csprojAssemblyReference.cache
+C:\Users\fbalt\Desktop\halısiparis\haliSiparis\hali.BLL\obj\Debug\hali.BLL.csproj.CopyComplete
+C:\Users\fbalt\Desktop\halısiparis\haliSiparis\hali.BLL\obj\Debug\hali.BLL.dll
+C:\Users\fbalt\Desktop\halısiparis\haliSiparis\hali.BLL\obj\Debug\hali.BLL.pdb
+C:\Users\fbalt\Desktop\halısiparis\haliSiparis\hali.BLL\obj\Debug\hali.BLL.csproj.CoreCompileInputs.cache

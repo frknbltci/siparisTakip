@@ -1,0 +1,126 @@
+﻿
+@{
+    ViewBag.Title = "addOrder";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<div class="panel-body">
+    <form class="col-sm-6" method="post" id="k" enctype="multipart/form-data">
+        <div class="form-group">
+            <label>Müşteri Adı</label>
+            <input id="customer" type="text" class="form-control" placeholder="Müşteri Adı Giriniz">
+        </div>
+        <div class="form-group">
+            <label>Ürün Adı</label>
+            <input id="productName" type="text" class="form-control" placeholder="Ürün Adı Giriniz">
+        </div>
+        <div class="form-group">
+            <label>Ürün Kodu </label>
+            <input id="productCode" type="text" class="form-control" placeholder="Ürün Kodu Giriniz">
+        </div>
+        <div class="form-group">
+            <label>Kargo Kodu</label>
+            <input id="cargoCode" type="text" class="form-control" placeholder="Kargo Kodu Giriniz">
+        </div>
+        <div class="form-group">
+            <label>Adet</label>
+            <input id="piece" type="number" class="form-control" placeholder="Adet Giriniz">
+        </div>
+        <div class="form-group">
+            <label>Uzunluk</label>
+            <input id="length" type="number" class="form-control" placeholder="Uzunluk Giriniz">
+        </div>
+        <div class="form-group">
+            <label>Genişlik</label>
+            <input id="width" type="number" class="form-control" placeholder="Genişlik Giriniz">
+        </div>
+        <div class="form-group">
+            <label>M2(Metre Kare)</label>
+            <input id="m2" type="number" class="form-control" placeholder="Metre Kare  Giriniz">
+        </div>
+        <div class="form-group">
+            <label>Sipariş Tarihi</label>
+            <input id='siparisTarihi' type="text" class="form-control" placeholder="Sipariş Tarihi Giriniz">
+        </div>
+        <div class="form-group">
+            <label>Teslim Tarihi</label>
+            <input id='teslimTarihi' type="text" class="form-control" placeholder="Teslim Tarihi Giriniz">
+        </div>
+        <div class="form-group">
+            <label>Açıklama</label>
+            <textarea id="description" class="form-control" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+
+            <label>Fotoğraf Yükle</label>
+            <input id="takeImg" type="file" name="Resim"><br />
+
+            <div id="imagePreview">
+                <img id="uploadImage" src="~/Images/resimYok.png" height="200"  alt="Image Preview" />
+
+            </div>
+
+
+        </div>
+        <div class="reset-button">
+            <a href="#" class="btn btn-warning">Sıfırla</a>
+            <button onclick="orderSave()" id="saveBtn" class="btn btn-success">Kaydet</button>
+        </div>
+    </form>
+</div>
+
+
+@section frkn {
+    <script>
+
+       function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#uploadImage').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#takeImg").change(function () {
+        readURL(this);
+    });
+
+        function orderSave() {
+            var file = $("#takeImg").get(0).files;
+            var data = new FormData;
+            data.append("Resim", file[0]);
+            data.append("Adet", $("#piece").val());
+            data.append("Aciklama", $("#description").val());
+            data.append("TeslimTarihi", $("#teslimTarihi").val());
+            data.append("SiparisTarihi", $("#siparisTarihi").val());
+            data.append("M2", $("#m2").val());
+            data.append("Genislik", $("#width").val());
+            data.append("Uzunluk", $("#length").val());
+            data.append("KargoKodu", $("#cargoCode").val());
+            data.append("UrunKodu", $("#productCode").val());
+            data.append("UrunAdi", $("#productName").val());
+            data.append("MusteriAdi", $("#customer").val());
+   
+            $.ajax({
+                url: "/Order/addOrder",
+                type: "Post",
+                data: data,
+                contentType: false,
+                processData: false,
+                success: function (e) {
+                    alert(e);
+                }
+
+            });
+
+        }
+
+    </script>
+
+}
+
+

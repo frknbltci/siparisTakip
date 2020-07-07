@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.779
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hali.DAL", "hali.DAL\hali.DAL.csproj", "{C40E4CF4-146E-4BDE-A539-6BC8FA414286}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hali.BLL", "hali.BLL\hali.BLL.csproj", "{4F8376B9-463A-4646-8AA4-5051933180A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hali.UI", "hali.UI\hali.UI.csproj", "{C09E8749-485D-4690-8DB5-4958330C33D2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C40E4CF4-146E-4BDE-A539-6BC8FA414286}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C40E4CF4-146E-4BDE-A539-6BC8FA414286}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C40E4CF4-146E-4BDE-A539-6BC8FA414286}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C40E4CF4-146E-4BDE-A539-6BC8FA414286}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F8376B9-463A-4646-8AA4-5051933180A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F8376B9-463A-4646-8AA4-5051933180A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F8376B9-463A-4646-8AA4-5051933180A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F8376B9-463A-4646-8AA4-5051933180A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C09E8749-485D-4690-8DB5-4958330C33D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C09E8749-485D-4690-8DB5-4958330C33D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C09E8749-485D-4690-8DB5-4958330C33D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C09E8749-485D-4690-8DB5-4958330C33D2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4FB978DE-4C8B-4137-81DA-AC5462B66C4E}
+	EndGlobalSection
+EndGlobal

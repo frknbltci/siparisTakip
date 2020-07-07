@@ -1,0 +1,66 @@
+﻿
+
+@{
+    ViewBag.Title = "NotActiveCargo";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+@model List<hali.DAL.DB.Cargo>
+<h2>NotActiveCargo</h2>
+
+
+<div class="table-responsive">
+    <table id="dataTableExample1" class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr class="info">
+                <th>Kargo İsmi</th>
+                <th>İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+       {
+           <tr>
+               <td>@item.CargoName</td>
+               <td>
+                   <button type="button" onclick="aktifEtPopUpShow(@item.ID)" id="ActiveBtn" class="btn btn-info btn-xs" data-toggle="modal" data-target="#activeYapPopUp">Aktif Yap</button>
+               </td>
+           </tr>
+       }
+        
+        </tbody>
+
+    </table>
+</div>
+
+<div class="modal fade" id="activeYapPopUp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header modal-header-primary">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3><i class="fa fa-user m-r-5"></i> Kargoyu Aktifleştirme Ekranı</h3>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <div class="col-md-12 form-group user-form-group">
+                                    <label class="control-label">Kargoyu Aktifleştirmek İstediğinden Eminmisin ?</label>
+                                    <div class="pull-right">
+                                        <button type="button" data-dismiss="modal" class="btn btn-danger btn-sm">NO</button>
+                                        <button type="submit" id="aktifEtKargo" class="btn btn-add btn-sm">YES</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>

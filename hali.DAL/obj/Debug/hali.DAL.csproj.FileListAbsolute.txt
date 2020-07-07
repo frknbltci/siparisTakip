@@ -1,0 +1,12 @@
+C:\Users\fbalt\Desktop\halısiparis\haliSiparis\hali.DAL\bin\Debug\hali.DAL.dll.config
+C:\Users\fbalt\Desktop\halısiparis\haliSiparis\hali.DAL\bin\Debug\hali.DAL.dll
+C:\Users\fbalt\Desktop\halısiparis\haliSiparis\hali.DAL\bin\Debug\hali.DAL.pdb
+C:\Users\fbalt\Desktop\halısiparis\haliSiparis\hali.DAL\bin\Debug\EntityFramework.dll
+C:\Users\fbalt\Desktop\halısiparis\haliSiparis\hali.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\fbalt\Desktop\halısiparis\haliSiparis\hali.DAL\bin\Debug\EntityFramework.xml
+C:\Users\fbalt\Desktop\halısiparis\haliSiparis\hali.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\fbalt\Desktop\halısiparis\haliSiparis\hali.DAL\obj\Debug\hali.DAL.csprojAssemblyReference.cache
+C:\Users\fbalt\Desktop\halısiparis\haliSiparis\hali.DAL\obj\Debug\hali.DAL.csproj.CopyComplete
+C:\Users\fbalt\Desktop\halısiparis\haliSiparis\hali.DAL\obj\Debug\hali.DAL.dll
+C:\Users\fbalt\Desktop\halısiparis\haliSiparis\hali.DAL\obj\Debug\hali.DAL.pdb
+C:\Users\fbalt\Desktop\halısiparis\haliSiparis\hali.DAL\obj\Debug\hali.DAL.csproj.CoreCompileInputs.cache
