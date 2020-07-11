@@ -3,6 +3,7 @@ using hali.DAL.DB;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,6 +23,17 @@ namespace hali.BLL.Repository.Entity
                                ID = mar.ID,
                            }).SingleOrDefault();
             return bulunan;
+            
+        }
+
+       
+
+        public void  Edit (MarketDTO market)
+        {
+            Market m = Find((int)market.ID);
+            m.MarketName = market.MarketName;
+            m.ComissionPrice = market.CommisionPrice;
+            Save();
 
         }
     }

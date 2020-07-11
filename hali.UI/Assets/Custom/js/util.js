@@ -289,11 +289,10 @@ function showUpdateMarket(id) {
         type: "Post",
         success: function (e) {
             if (e) {
-                window.alert(e.ComissionPrice);
                 $('#duzenlemeEkrani').removeClass("hidden");
                 $('#marketDznIsmi').val(e.MarketName);
-                $('#komisyonDznIsmi').val(e.ComissionPrice);
-                //  $('#saveCargoNameBtn').attr("onclick", "UpdateCargoName(" + data.ID + ")");
+                $('#komisyonDznIsmi').val(e.CommisionPrice);
+               $('#saveMarketNameBtn').attr("onclick", "UpdateMarketName(" + data.ID + ")");
             } else {
 
 
@@ -304,6 +303,40 @@ function showUpdateMarket(id) {
 
 };
 
+
+function UpdateMarketName(id) {
+
+    $('#marketDznIsmi').val();
+    $('#komisyonDznIsmi').val();
+
+    var data = {
+        ID: id,
+        MarketName: $('#marketDznIsmi').val(),
+        CommisionPrice: $('#komisyonDznIsmi').val()
+    };
+
+    $.ajax({
+
+        url: "/Settings/EditMarketName",
+        data: data,
+        type: "Post",
+        success: function (e) {
+            if (e==true) {
+                successMessage("Güncellendi", "Başarılı");
+                setTimeout(function () {
+                    window.location.href = "/Settings/MarketOperations";
+                }, 2000);
+                //Toastr'a bak ! 
+            } else {
+                errorMessage("Güncellenmedi", "Başarısız.")
+
+            }
+        }
+
+    });
+
+
+}
 
 function resetDznMarket() {
     $('#marketDznIsmi').val('');

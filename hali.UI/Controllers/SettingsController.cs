@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace hali.UI.Controllers
 {
@@ -98,14 +99,13 @@ namespace hali.UI.Controllers
         }
 
         [HttpPost]
-
         public ActionResult ekleMarket(MarketVM market)
         {
             if (ModelState.IsValid)
             {
                 Market m = new Market(){ 
                 
-                    ComissionPrice=market.ComissionPrice,
+                      ComissionPrice=market.ComissionPrice,
                     MarketName=market.MarketName,
                     UserID=market.UserID
                 
@@ -124,6 +124,7 @@ namespace hali.UI.Controllers
         } 
 
         //[HttpPost]
+        // Düzenleye tıklandığında inputları doldurmaya yarayan controller
         public ActionResult UpdateMarketName(int ID)
         {
 
@@ -131,6 +132,21 @@ namespace hali.UI.Controllers
 
            
             return Json(marketVerileri, JsonRequestBehavior.AllowGet);
+        }
+
+        //Dolan inputları tekrar kaydeden controller
+        public ActionResult EditMarketName(MarketDTO gelen)
+        {
+            MarketDTO market = new MarketDTO()
+            {
+                CommisionPrice = gelen.CommisionPrice,
+                MarketName = gelen.MarketName,
+                ID = gelen.ID
+            };
+
+            service.MarketService.Edit(market);
+
+               return Json(true, JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult UserOperations()
